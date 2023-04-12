@@ -1,13 +1,16 @@
-import './App.css'
+import React, { Fragment } from 'react';
+import '../styles/Global.css';
 
-function App() {
+const App = () => {
 
   return (
-    <div>
-      <h1>
+    <Fragment>
+      <h1 className='font-bold text-center'> 
         Hello World
       </h1>
-    </div>
+
+      <button>Button</button>
+    </Fragment>
   )
 }
 
