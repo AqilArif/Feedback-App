@@ -2,9 +2,9 @@ import React, { Fragment, useState } from 'react';
 import '../styles/Global.css';
 import '../styles/index.css';
 import Header from './components/Header';
-import FeedbackItem from './components/FeedbackItem';
 import feedbackData from './data/FeedbackData';
 import FeedbackList from './components/FeedbackList';
+import FeedbackStats from './components/FeedbackStats';
 
 function App () {
 
@@ -21,10 +21,9 @@ function App () {
       <Header />
 
       <div className="container">
-        <FeedbackList 
-          feedback={feedback} 
-          handleDelete={deleteFeedback} 
-        />
+        <FeedbackStats feedback={feedback} />
+
+        <FeedbackList feedback={feedback}  handleDelete={deleteFeedback} />
       </div>
     </Fragment>
   )
