@@ -1,9 +1,9 @@
 import Card from "./shared/Card"
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 const FeedbackItem = ( { item } ) => {
   return (
-    <Card reverse={true}>
+    <Card reverse={false}>
       <div className='num-display'>
         {item.rating}
       </div>
@@ -15,8 +15,8 @@ const FeedbackItem = ( { item } ) => {
   )
 }
 
-FeedbackItem.PropTypes = {
-  item: PropTypes.object.isRequired,
+FeedbackItem.propTypes = {
+  item: propTypes.object.isRequired,
 }
 
 export default FeedbackItem
