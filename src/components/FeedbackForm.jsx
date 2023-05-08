@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import Card from './shared/Card'
+import React, { useState } from 'react';
+import Card from './shared/Card';
 import Button from './shared/Button';
 import RatingSelect from './RatingSelect';
 
-const FeedbackForm = () => {
+const FeedbackForm = ({ handleAdd }) => {
 
   const [text, setText] = useState('');
 
@@ -38,10 +38,26 @@ const FeedbackForm = () => {
 
     setText(event.target.value)
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (text.trim().length > 10) {
+        
+        const newFeedback = {
+            text: text, // in short form you can also write only text like this (text)
+            rating: rating
+        }
+
+        handleAdd(newFeedback);
+
+        setText(''); // After add the feedback set it to it's initial state
+    }
+  }
   
   return (
     <Card>
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <h2>How would rate your service with us?</h2>
 
             <RatingSelect select={(rating) => setRating(rating)} />

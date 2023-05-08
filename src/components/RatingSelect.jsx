@@ -24,6 +24,7 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num1">1</label>
       </li>
+
       <li>
         <input
           type="radio"
@@ -35,6 +36,7 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num2">2</label>
       </li>
+      
       <li>
         <input
           type="radio"
@@ -46,6 +48,7 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num3">3</label>
       </li>
+
       <li>
         <input
           type="radio"
@@ -57,6 +60,7 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num4">4</label>
       </li>
+
       <li>
         <input
           type="radio"
@@ -68,6 +72,7 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num5">5</label>
       </li>
+
       <li>
         <input
           type="radio"
@@ -79,6 +84,7 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num6">6</label>
       </li>
+
       <li>
         <input
           type="radio"
@@ -90,6 +96,7 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num7">7</label>
       </li>
+      
       <li>
         <input
           type="radio"
@@ -101,6 +108,7 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num8">8</label>
       </li>
+      
       <li>
         <input
           type="radio"
@@ -112,6 +120,7 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num9">9</label>
       </li>
+      
       <li>
         <input
           type="radio"

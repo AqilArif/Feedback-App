@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import '../styles/Global.css';
 import '../styles/index.css';
 import Header from './components/Header';
@@ -17,16 +18,25 @@ function App () {
     }
   }
 
+  const addFeedback = (newFeedback) => {
+    
+    newFeedback.id = uuidv4(); // this will generate the random ID for newFeedback item
+
+    setFeedback([newFeedback, ...feedback]); // Get already added feedback Items and add a new one to the existing array 
+
+    console.log(newFeedback);
+  }
+
   return (
     <Fragment>
       <Header />
 
       <div className="container">
-        <FeedbackForm />
+        <FeedbackForm handleAdd={addFeedback} />
         
         <FeedbackStats feedback={feedback} />
 
-        <FeedbackList feedback={feedback}  handleDelete={deleteFeedback} />
+        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
       </div>
     </Fragment>
   )
