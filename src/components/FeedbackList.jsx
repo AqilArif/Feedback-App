@@ -32,21 +32,6 @@ const FeedbackList = ( { feedback, handleDelete } ) => {
       </AnimatePresence>
     </div>
   )
-  // return (
-  //   <div className='feedback-list'>
-  //     {
-  //       feedback.map((item) => {
-  //         return (
-  //           <FeedbackItem 
-  //             item={item} 
-  //             key={item.id}  
-  //             handleDelete={handleDelete} 
-  //           />
-  //         )
-  //       })
-  //     }
-  //   </div>
-  // )
 }
 
 FeedbackList.propTypes = {
